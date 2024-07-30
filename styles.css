@@ -3,13 +3,16 @@ body {
     background-size: cover;
     color: white;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 .fade-in {
     animation: fadeIn 2s ease-in-out;
 }
+
 .typewriter h2 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
@@ -18,20 +21,25 @@ body {
     letter-spacing: .15em; /* Adjust as needed */
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
+
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
 }
+
 nav a {
     transition: color 0.3s;
 }
+
 nav a:hover {
     color: #ffeb3b;
 }
+
 .container {
     backdrop-filter: blur(5px); /* Adds a glass effect */
     padding: 2rem;
