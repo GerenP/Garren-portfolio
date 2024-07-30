@@ -1,7 +1,53 @@
 body {
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    color: black;
+    font-family: 'Arial', sans-serif; /* Use a modern font for better aesthetics */
+}
+
+span {
+    color: #4bffa5;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for navbar */
+}
+
+nav {
+    backdrop-filter: blur(5px); /* Blur effect on the navbar */
+}
+
+nav a {
+    color: #ffeb3b; /* Bright color for navbar links */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff; /* Highlight color on hover */
+}
+
+.container {
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9); /* Lighter background for container */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark footer for better contrast */
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.social-icon {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8; /* Fades the icon slightly on hover */
 }
 
 @keyframes fadeIn {
@@ -9,16 +55,12 @@ body {
     to { opacity: 1; }
 }
 
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
-
 .typewriter h2 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 
@@ -32,17 +74,13 @@ body {
     50% { border-color: orange; }
 }
 
-nav a {
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #ffeb3b;
-}
-
 .container {
-    backdrop-filter: blur(5px); /* Adds a glass effect */
+    backdrop-filter: blur(5px);
     padding: 2rem;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(255, 255, 255, 0.9); /* Lighter background for container */
+}
+
+.copyright {
+    color: #afafaf;
 }

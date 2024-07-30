@@ -3,70 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Garren-Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.config.js">
 </head>
+<style>
+    .fixed-left-info {
+        position: fixed;
+        left: 10px;
+        top: 90%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .fixed-left-info p {
+        margin: 0;
+    }
+    .fixed-left-info a {
+        color: white;
+        text-decoration: none;
+    }
+    .fixed-left-info a:hover {
+        text-decoration: underline;
+    }
+</style>
 <body>
-    <header class="flex justify-between items-center p-5 bg-opacity-50">
-        <h1 class="text-4xl font-bold">My Portfolio</h1>
-        <nav>
-            <a href="#about" class="mx-3">About Me</a>
-            <a href="#skills" class="mx-3">Skills</a>
-            <a href="#projects" class="mx-3">Projects</a>
-            <a href="#testimonials" class="mx-3">Testimonials</a>
-            <a href="#contact" class="mx-3">Contact</a>
-        </nav>
+    <header class="flex justify-between items-center p-5 bg-opacity-50 backdrop-blur-md shadow-lg" id="navbar">
+        <div class="logo aos-init aos-animate" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
+            <a href="#" class="copyright text-2xl font-bold transition duration-300"><span>Garren</span> Benaya</a>
+        </div>
+        <ul class="nav-links flex space-x-5">
+            <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="1200" class="aos-init aos-animate">
+                <a href="#about" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">About</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200" class="aos-init aos-animate">
+                <a href="#projects" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">My Works</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="900" data-aos-duration="1200" class="aos-init aos-animate">
+                <a href="#skills" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">Skills</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1200" class="aos-init aos-animate">
+                <a href="#contact" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a>
+            </li>
+            <li data-aos="fade-down" data-aos-delay="1500" data-aos-duration="1200" class="aos-init aos-animate">
+                <a href=""><button class="text-white hover:text-green-400 transition duration-300">Garren</button></a>
+            </li>
+        </ul>
     </header>
-    <main class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="fixed-left-info">
+        <p><a href="mailto:garrenbenaya74@gmail.com@gmail.com">Email: garrenbenaya74@gmail.com</a></p>
+        <p><a href="tel:+6282116341828">Telepon: +62 821-1634-1828</a></p>
+    </div>
+
+    <main class="flex flex-col items-center justify-center min-h-screen" data-aos="fade-up">
+        <h1 class="text-6xl font-bold mb-5 text-white">Hi, I'm <span>Garren Benaya</span>, a Front-End Developer Based In Jakarta, Indonesia.</h1>
         <div class="typewriter">
-            <h2 class="text-6xl font-bold mb-5">Welcome to My Portfolio</h2>
         </div>
         <p class="text-2xl mb-10 fade-in">Front-End Developer</p>
-        <a href="#about" class="bg-white text-black px-5 py-3 rounded-full mb-3">Learn More</a>
-        <a href="cv/My_CV.pdf" download class="bg-white text-black px-5 py-3 rounded-full mb-3">Download CV</a>
     </main>
-    
-    <section id="about" class="py-20 bg-white text-black">
+
+    <section id="about" class="py-20 bg-white text-black" data-aos="fade-right">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5 fade-in">About Me</h2>
-            <p class="text-lg fade-in">I am a passionate Front-End Developer with a love for creating dynamic and interactive web applications. With a strong background in HTML, CSS, JavaScript, and various frameworks, I bring designs to life and enhance user experiences.</p>
+            <h2 class="text-4xl font-bold mb-5">About Me</h2>
+            <p class="text-lg">I am a passionate Front-End Developer...</p>
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-gray-100">
+    <section id="skills" class="py-20 bg-gray-100" data-aos="fade-left">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5 fade-in">Skills</h2>
+            <h2 class="text-4xl font-bold mb-5">Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                <div class="p-5 bg-white shadow rounded-lg fade-in">
+                <div class="p-5 bg-white shadow rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">HTML</h3>
                     <p>Proficient in creating structured and semantic HTML.</p>
                 </div>
-                <div class="p-5 bg-white shadow rounded-lg fade-in">
+                <div class="p-5 bg-white shadow rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">CSS</h3>
                     <p>Skilled in crafting responsive and visually appealing designs.</p>
                 </div>
-                <div class="p-5 bg-white shadow rounded-lg fade-in">
+                <div class="p-5 bg-white shadow rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">JavaScript</h3>
-                    <p>Experienced in adding interactivity and dynamic behavior to websites.</p>
+                    <p>Experienced in adding interactivity...</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-white text-black">
+    <section id="projects" class="py-20 bg-white text-black" data-aos="fade-up">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5 fade-in">Projects</h2>
+            <h2 class="text-4xl font-bold mb-5">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                <div class="p-5 bg-gray-100 shadow rounded-lg fade-in">
+                <div class="p-5 bg-gray-100 shadow rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">Project 1</h3>
                     <p>Brief description of Project 1.</p>
                 </div>
-                <div class="p-5 bg-gray-100 shadow rounded-lg fade-in">
+                <div class="p-5 bg-gray-100 shadow rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">Project 2</h3>
                     <p>Brief description of Project 2.</p>
                 </div>
-                <div class="p-5 bg-gray-100 shadow rounded-lg fade-in">
+                <div class="p-5 bg-gray-100 shadow rounded-lg">
                     <h3 class="text-2xl font-bold mb-3">Project 3</h3>
                     <p>Brief description of Project 3.</p>
                 </div>
@@ -74,19 +113,19 @@
         </div>
     </section>
 
-    <section id="testimonials" class="py-20 bg-gray-100">
+    <section id="testimonials" class="py-20 bg-gray-100" data-aos="fade-down">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5 fade-in">Testimonials</h2>
+            <h2 class="text-4xl font-bold mb-5">Testimonials</h2>
             <div class="flex flex-col space-y-5">
-                <div class="p-5 bg-white shadow rounded-lg fade-in">
+                <div class="p-5 bg-white shadow rounded-lg">
                     <p><em>"An amazing developer who truly understands user needs!"</em></p>
                     <p>- Client 1</p>
                 </div>
-                <div class="p-5 bg-white shadow rounded-lg fade-in">
+                <div class="p-5 bg-white shadow rounded-lg">
                     <p><em>"Exceptional work and attention to detail. Highly recommended!"</em></p>
                     <p>- Client 2</p>
                 </div>
-                <div class="p-5 bg-white shadow rounded-lg fade-in">
+                <div class="p-5 bg-white shadow rounded-lg">
                     <p><em>"Great communication and outstanding results!"</em></p>
                     <p>- Client 3</p>
                 </div>
@@ -94,10 +133,10 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white text-black">
+    <section id="contact" class="py-20 bg-white text-black" data-aos="fade-up">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5 fade-in">Contact</h2>
-            <form action="#" method="post" class="bg-gray-100 p-6 shadow rounded-lg fade-in">
+            <h2 class="text-4xl font-bold mb-5">Contact</h2>
+            <form action="#" method="post" class="bg-gray-100 p-6 shadow rounded-lg mb-10">
                 <div class="mb-4">
                     <label for="name" class="block text-lg font-bold mb-2">Name</label>
                     <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg">
@@ -112,22 +151,39 @@
                 </div>
                 <button type="submit" class="bg-blue-500 text-white px-5 py-3 rounded-lg">Send</button>
             </form>
+            <div class="bg-gray-100 p-6 shadow rounded-lg">
+                <h3 class="text-2xl font-bold mb-3">Contact Information</h3>
+                <p class="mb-2"><strong>Phone:</strong> <a href="tel:+6282116341828" class="text-blue-500 hover:underline">+62 821 1634 1828</a></p>
+                <p class="mb-2"><strong>Email:</strong> <a href="mailto:garrenbenaya74@gmail.com" class="text-blue-500 hover:underline">garrenbenaya74@gmail.com</a></p>
+                <p><strong>Freelance Profile:</strong> <a href="https://your-freelance-profile.com" target="_blank" class="text-blue-500 hover:underline">your-freelance-profile.com</a></p>
+            </div>
         </div>
     </section>
-
-    <footer class="bg-gray-800 py-10 text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-2xl font-bold mb-5">Connect with me</h2>
-            <div class="flex justify-center space-x-5 mb-5">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:text-yellow-400">LinkedIn</a>
-                <a href="https://github.com/yourusername" target="_blank" class="hover:text-yellow-400">GitHub</a>
-                <a href="https://twitter.com/yourusername" target="_blank" class="hover:text-yellow-400">Twitter</a>
-                <a href="https://www.instagram.com/yourusername" target="_blank" class="hover:text-yellow-400">Instagram</a>
+        <footer class="bg-gray-900 py-10 text-white text-center">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center space-x-8 mb-5">
+                    <a href="https://github.com/gerenP" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" class="w-10 h-10">
+                    </a>
+                    <a href="https://www.instagram.com/geren_aja" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" class="w-10 h-10">
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="w-10 h-10">
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter" class="w-10 h-10">
+                    </a>
+                </div>
+                <a href="https://www.instagram.com/geren_aja" target="_blank" class="copyright text-sm">Made by Garren Benaya</a>
             </div>
-            <p class="text-sm">© 2024 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script> <!-- Link to the JS file -->
+        </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+        });
+    </script>
 </body>
 </html>
