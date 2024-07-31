@@ -7,65 +7,141 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="tailwind.config.js">
+    <style>
+        .fixed-left-info {
+            position: fixed;
+            left: 10px;
+            top: 90%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .fixed-left-info p {
+            margin: 0;
+        }
+        .fixed-left-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .fixed-left-info a:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            transition: background-color 0.3s ease, top 0.3s ease;
+        }
+        .nav-links a {
+            transition: color 0.3s ease;
+        }
+        .burger {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+        .typewrite > .wrap {
+            border-right: 0.08em solid #afafaf;
+            color: #afafaf;
+        }
+    </style>
 </head>
-<style>
-    .fixed-left-info {
-        position: fixed;
-        left: 10px;
-        top: 90%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.7);
-        padding: 10px;
-        border-radius: 8px;
-    }
-    .fixed-left-info p {
-        margin: 0;
-    }
-    .fixed-left-info a {
-        color: white;
-        text-decoration: none;
-    }
-    .fixed-left-info a:hover {
-        text-decoration: underline;
-    }
-</style>
-<body>
-    <header class="flex justify-between items-center p-5 bg-opacity-50 backdrop-blur-md shadow-lg" id="navbar">
-        <div class="logo aos-init aos-animate" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
-            <a href="#" class="copyright text-2xl font-bold transition duration-300"><span>Garren</span> Benaya</a>
+<body class="bg-gray-900 text-white">
+    <header class="navbar flex justify-between items-center p-5 shadow-lg" id="navbar">
+        <div class="logo" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
+            <a href="#" class="copyright text-2xl font-bold transition duration-300 text-white"><span>Garren</span> Benaya</a>
         </div>
-        <ul class="nav-links flex space-x-5">
-            <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="1200" class="aos-init aos-animate">
+        <ul class="nav-links flex space-x-5" data-aos="fade-down">
+            <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="900">
                 <a href="#about" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">About</a>
             </li>
-            <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200" class="aos-init aos-animate">
+            <li data-aos="fade-down" data-aos-delay="600" data-aos-duration="1200">
                 <a href="#projects" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">My Works</a>
             </li>
-            <li data-aos="fade-down" data-aos-delay="900" data-aos-duration="1200" class="aos-init aos-animate">
+            <li data-aos="fade-down" data-aos-delay="900" data-aos-duration="1500">
                 <a href="#skills" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">Skills</a>
             </li>
-            <li data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1200" class="aos-init aos-animate">
+            <li data-aos="fade-down" data-aos-delay="1200" data-aos-duration="1800">
                 <a href="#contact" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a>
             </li>
-            <li data-aos="fade-down" data-aos-delay="1500" data-aos-duration="1200" class="aos-init aos-animate">
-                <a href=""><button class="text-white hover:text-green-400 transition duration-300">Garren</button></a>
+            <li data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2100">
+                <a href="#">
+                    <button class="btn-resume text-white px-3 py-2 hover:text-gray-300 transition duration-300">Garren</button>
+                </a>
             </li>
         </ul>
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
     </header>
 
     <div class="fixed-left-info">
-        <p><a href="mailto:garrenbenaya74@gmail.com@gmail.com">Email: garrenbenaya74@gmail.com</a></p>
+        <p><a href="mailto:garrenbenaya74@gmail.com">Email: garrenbenaya74@gmail.com</a></p>
         <p><a href="tel:+6282116341828">Telepon: +62 821-1634-1828</a></p>
     </div>
+    <ul class="header-right-info" data-aos="fade-in" data-aos-delay="2000" data-aos-duration="1200">
+        <p>Follow Me</p>
+        <div class="standing-line-right"></div>
+        <li>
+            <a href="https://github.com/gerenp" target="_blank"><i class="fa fa-github"></i></a>
+        </li>
+        <li>
+            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+        </li>
+        <li>
+            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li class="last-icon">
+            <a href="https://www.instagram.com/geren_aja/" target="_blank"><i class="fa fa-instagram"></i></a>
+        </li>
+    </ul>
 
     <main class="flex flex-col items-center justify-center min-h-screen" data-aos="fade-up">
-        <h1 class="text-4xl font-bold mb-5 text-white">Hi, I'm <span>Garren Benaya</span>, a Front-End <br>Developer Based In Jakarta, Indonesia.</h1>
-        <div class="typewriter">
-        </div>
-        <p class="text-2xl mb-10 fade-in">Front-End Developer</p>
+        <h1 class="text-4xl font-bold mb-4 mr-48 text-white">Hi, I'm <span>Garren Benaya</span>, a Front-End <br>Developer Based In Jakarta, Indonesia.</h1>
+        <h2 data-aos="fade-in" data-aos-delay="500" data-aos-duration="1900">
+            <a href="#" class="typewrite mr-48" data-period="2000" data-type='[  
+              "Crafting elegant solutions to complex problems with a focus on user experience.",
+              "Bringing ideas to life with a relentless drive for innovation and excellence.",
+              "Building beautiful and functional web experiences with passion."
+              ]'><span class="wrap"></span></a>
+        </h2>
     </main>
-
+    
     <section id="about" class="py-20 bg-white text-black" data-aos="fade-right">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-5">About Me</h2>
@@ -73,7 +149,7 @@
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-gray-100" data-aos="fade-left">
+    <section id="skills" class="py-20 bg-white text-black" data-aos="fade-left">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold mb-5">Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -113,76 +189,109 @@
         </div>
     </section>
 
-    <section id="testimonials" class="py-20 bg-gray-100" data-aos="fade-down">
+    <section id="contact" class="py-20 bg-gray-100 text-black" data-aos="fade-up">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5">Testimonials</h2>
-            <div class="flex flex-col space-y-5">
-                <div class="p-5 bg-white shadow rounded-lg">
-                    <p><em>"An amazing developer who truly understands user needs!"</em></p>
-                    <p>- Client 1</p>
+            <h2 class="text-4xl font-bold mb-5">Contact</h2>
+            <p>If you would like to get in touch...</p>
+            <form action="#" method="POST">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg font-medium mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
                 </div>
-                <div class="p-5 bg-white shadow rounded-lg">
-                    <p><em>"Exceptional work and attention to detail. Highly recommended!"</em></p>
-                    <p>- Client 2</p>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg font-medium mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
                 </div>
-                <div class="p-5 bg-white shadow rounded-lg">
-                    <p><em>"Great communication and outstanding results!"</em></p>
-                    <p>- Client 3</p>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg font-medium mb-2">Message</label>
+                    <textarea id="message" name="message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
                 </div>
-            </div>
+                <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white text-black" data-aos="fade-up">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-5">Contact</h2>
-            <form action="#" method="post" class="bg-gray-100 p-6 shadow rounded-lg mb-10">
-                <div class="mb-4">
-                    <label for="name" class="block text-lg font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-lg font-bold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-lg font-bold mb-2">Message</label>
-                    <textarea id="message" name="message" class="w-full px-3 py-2 border rounded-lg"></textarea>
-                </div>
-                <button type="submit" class="bg-blue-500 text-white px-5 py-3 rounded-lg">Send</button>
-            </form>
-            <div class="bg-gray-100 p-6 shadow rounded-lg">
-                <h3 class="text-2xl font-bold mb-3">Contact Information</h3>
-                <p class="mb-2"><strong>Phone:</strong> <a href="tel:+6282116341828" class="text-blue-500 hover:underline">+62 821 1634 1828</a></p>
-                <p class="mb-2"><strong>Email:</strong> <a href="mailto:garrenbenaya74@gmail.com" class="text-blue-500 hover:underline">garrenbenaya74@gmail.com</a></p>
-                <p><strong>Freelance Profile:</strong> <a href="https://your-freelance-profile.com" target="_blank" class="text-blue-500 hover:underline">your-freelance-profile.com</a></p>
-            </div>
-        </div>
-    </section>
-        <footer class="bg-gray-900 py-10 text-white text-center">
-            <div class="container mx-auto px-6">
-                <div class="flex justify-center space-x-8 mb-5">
-                    <a href="https://github.com/gerenP" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
-                        <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" class="w-10 h-10">
-                    </a>
-                    <a href="https://www.instagram.com/geren_aja" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
-                        <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" class="w-10 h-10">
-                    </a>
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
-                        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="w-10 h-10">
-                    </a>
-                    <a href="https://twitter.com/yourusername" target="_blank" class="social-icon transition duration-300 transform hover:scale-110">
-                        <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter" class="w-10 h-10">
-                    </a>
-                </div>
-                <a href="https://www.instagram.com/geren_aja" target="_blank" class="copyright text-sm">Made by Garren Benaya</a>
-            </div>
-        </footer>
-        
+    <footer class="copyright py-4 bg-black text-white text-center">
+        <p>Made by Garren Benaya</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000, // Animation duration in milliseconds
+        AOS.init();
+
+        var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function() {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+        };
+
+        // Navbar scroll behavior
+        const navbar = document.getElementById('navbar');
+        const burger = document.getElementById('burger');
+        const navLinks = document.querySelector('.nav-links');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-80px';
+            } else {
+                navbar.style.top = '0';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
         });
     </script>
 </body>

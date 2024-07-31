@@ -14,3 +14,24 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
+const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > lastScrollY) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });

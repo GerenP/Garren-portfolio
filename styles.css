@@ -1,86 +1,172 @@
 body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: black;
-    font-family: 'Arial', sans-serif; /* Use a modern font for better aesthetics */
-}
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: black;
+            font-family: 'Arial', sans-serif; /* Use a modern font for better aesthetics */
+        }
 
-span {
-    color: #4bffa5;
-}
+        span {
+            color: #4bffa5;
+        }
 
-header {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker background for navbar */
-}
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background for navbar */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s ease-in-out;
+        }
 
-nav {
-    backdrop-filter: blur(5px); /* Blur effect on the navbar */
-}
+        header.hidden {
+            top: -80px; /* Adjust this value based on your navbar height */
+        }
 
-nav a {
-    color: #ffeb3b; /* Bright color for navbar links */
-    transition: color 0.3s;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            backdrop-filter: blur(5px); /* Blur effect on the navbar */
+        }
 
-nav a:hover {
-    color: #fff; /* Highlight color on hover */
-}
+        nav a {
+            color: #ffeb3b; /* Bright color for navbar links */
+            transition: color 0.3s;
+        }
 
-.container {
-    backdrop-filter: blur(5px);
-    padding: 2rem;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.9); /* Lighter background for container */
-}
+        nav a:hover {
+            color: #fff; /* Highlight color on hover */
+        }
 
-footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark footer for better contrast */
-}
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #ffeb3b;
+            margin: 4px;
+            transition: all 0.3s ease;
+        }
 
-.social-icon {
-    transition: transform 0.3s, opacity 0.3s;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.social-icon:hover {
-    transform: scale(1.2);
-    opacity: 0.8; /* Fades the icon slightly on hover */
-}
+        .nav-links li {
+            margin-left: 1rem;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        .nav-links a {
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.typewriter h2 {
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            padding: 1rem 0;
+        }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+        .nav-links li {
+            margin: 1rem 0;
+            text-align: center;
+        }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-}
+        .burger.toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
 
-.container {
-    backdrop-filter: blur(5px);
-    padding: 2rem;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.9); /* Lighter background for container */
-}
+        .burger.toggle .line2 {
+            opacity: 0;
+        }
 
-.copyright {
-    color: #afafaf;
-}
+        .burger.toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .container {
+            backdrop-filter: blur(5px);
+            padding: 2rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9); /* Lighter background for container */
+            margin-top: 100px; /* Added margin to account for fixed navbar */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Dark footer for better contrast */
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .social-icon {
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            opacity: 0.8; /* Fades the icon slightly on hover */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .typewriter h2 {
+            overflow: hidden;
+            border-right: .15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            color: #afafaf;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .copyright {
+            color: #afafaf;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .burger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+        }
