@@ -44,6 +44,104 @@ body {
             flex-direction: column;
             cursor: pointer;
         }
+        .btn-primary, .btn-archive, .btn-resume {
+            color: #4bffa5;
+            font-weight: 600;
+            font-size: 16px;
+            border: 2px solid #4bffa5;
+            background: #101010;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            outline: none;
+            -webkit-transition: 1.2s;
+            transition: 1.2s;
+            z-index: 2;
+        }
+
+        .garren a{
+                position: relative;
+                color: var(--clr);
+                background: var(--clr);
+                text-decoration; none;
+                text-transform; uppercase;
+                letter-spacing: 0.1em;
+                font-weight: 400;
+                padding: 10px 30px;
+        }
+
+        .garren a:hover {
+            background: var(--clr);
+            box-shadow: 0 0 35px var(--clr);
+        }
+
+        .garren a:before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: black;
+        }
+
+        .garren a span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .garren a i {
+            position: absolute;
+            inset: 0;
+            display: block;
+        }
+
+        .garren a i::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 80%;
+            width: 10px;
+            height: 4px;
+            background: black;
+            transform: translateX(-50%) skewX(325deg);
+            transition: 0.5s;
+        }
+
+        .garren a:hover i::before {
+            width: 20px;
+            left: 20%;
+        }
+
+        .garren a i::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 10px;
+            height: 4px;
+            background: black;
+            transform: translateX(-50%) skewX(325deg);
+            transition: 0.5s;
+        }
+
+        .garren a:hover i::after {
+            width: 20px;
+            left: 80%;
+        }
+
+        .animate, .round {
+            webkit-animation: scale-up 1.2s forwards;
+            animation: scale-up 1.2s forwars;
+        }
+        .round .round-3 {
+            border-radius: 50%;
+            background-color: #4bffa5;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            z-index: -1;
+            -webkit-animation: scale-down 1.2s forwards;
+            animation: scale-down 1.2s forwards;
+        }
 
         .burger div {
             width: 25px;
