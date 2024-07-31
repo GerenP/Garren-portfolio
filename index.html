@@ -7,6 +7,76 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .fixed-left-info {
+            position: fixed;
+            left: 10px;
+            top: 90%;
+            transform: translateY(-50%);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .fixed-left-info p {
+            margin: 0;
+        }
+        .fixed-left-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .fixed-left-info a:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            transition: background-color 0.3s ease, top 0.3s ease;
+        }
+        .nav-links a {
+            transition: color 0.3s ease;
+        }
+        .burger {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+            .burger div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+        .typewrite > .wrap {
+            border-right: 0.08em solid #afafaf;
+            color: #afafaf;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white">
     <header class="navbar flex justify-between items-center p-5 shadow-lg" id="navbar">
@@ -27,7 +97,7 @@
                 <a href="#contact" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a>
             </li>
             <li class="garren" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2100">
-                <a href="" style="--clr:#4bffa5"><span>Garren</span><i></i>
+                <a href="" style="--clr:#00ffff"><span>Garren</span><i></i>
                 </a>
             </li>
         </ul>

@@ -2,15 +2,15 @@ body {
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             color: black;
-            font-family: 'Arial', sans-serif; /* Use a modern font for better aesthetics */
+            font-family: 'Arial', sans-serif; 
         }
 
         span {
-            color: #4bffa5;
+            color: #00ffff;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.8); /* Darker background for navbar */
+            background-color: rgba(0, 0, 0, 0.8); 
             position: fixed;
             width: 100%;
             top: 0;
@@ -19,7 +19,7 @@ body {
         }
 
         header.hidden {
-            top: -80px; /* Adjust this value based on your navbar height */
+            top: -80px; 
         }
 
         nav {
@@ -27,16 +27,16 @@ body {
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            backdrop-filter: blur(5px); /* Blur effect on the navbar */
+            backdrop-filter: blur(5px); 
         }
 
         nav a {
-            color: #ffeb3b; /* Bright color for navbar links */
+            color: #ffeb3b; 
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #fff; /* Highlight color on hover */
+            color: #fff; 
         }
 
         .burger {
@@ -45,10 +45,10 @@ body {
             cursor: pointer;
         }
         .btn-primary, .btn-archive, .btn-resume {
-            color: #4bffa5;
+            color: #00ffff;
             font-weight: 600;
             font-size: 16px;
-            border: 2px solid #4bffa5;
+            border: 2px solid #00ffff;
             background: #101010;
             padding: 0.5em 1em;
             cursor: pointer;
@@ -134,7 +134,7 @@ body {
         }
         .round .round-3 {
             border-radius: 50%;
-            background-color: #4bffa5;
+            background-color: #00ffff;
             position: absolute;
             top: 5px;
             left: 10px;
@@ -267,72 +267,4 @@ body {
             .nav-links.active {
                 display: flex;
             }
-        }
-        .fixed-left-info {
-            position: fixed;
-            left: 10px;
-            top: 90%;
-            transform: translateY(-50%);
-            padding: 10px;
-            border-radius: 8px;
-        }
-        .fixed-left-info p {
-            margin: 0;
-        }
-        .fixed-left-info a {
-            color: white;
-            text-decoration: none;
-        }
-        .fixed-left-info a:hover {
-            text-decoration: underline;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            transition: background-color 0.3s ease, top 0.3s ease;
-        }
-        .nav-links a {
-            transition: color 0.3s ease;
-        }
-        .burger {
-            display: none;
-        }
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .burger {
-                display: block;
-                cursor: pointer;
-            }
-            .burger div {
-                width: 25px;
-                height: 3px;
-                background-color: white;
-                margin: 5px;
-                transition: all 0.3s ease;
-            }
-            .burger.toggle .line1 {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-            .burger.toggle .line2 {
-                opacity: 0;
-            }
-            .burger.toggle .line3 {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-        }
-        .typewrite > .wrap {
-            border-right: 0.08em solid #afafaf;
-            color: #afafaf;
         }
