@@ -1,9 +1,11 @@
 body {
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: black;
-            font-family: 'Arial', sans-serif; 
-        }
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Ensure the body takes the full width of the viewport */
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+}
 
         span {
             color: #00ffff;
