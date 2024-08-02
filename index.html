@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,31 +17,37 @@
             padding: 10px;
             border-radius: 8px;
         }
+
         .fixed-left-info p {
             margin: 0;
         }
+
         .fixed-left-info a {
             color: white;
             text-decoration: none;
         }
+
         .fixed-left-info a:hover {
             text-decoration: underline;
         }
+
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.8);
             z-index: 1000;
             transition: background-color 0.3s ease, top 0.3s ease;
         }
+
         .nav-links a {
             transition: color 0.3s ease;
         }
+
         .burger {
             display: none;
         }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -48,13 +55,16 @@
                 width: 100%;
                 background-color: rgba(0, 0, 0, 0.9);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .burger {
                 display: block;
                 cursor: pointer;
             }
+
             .burger div {
                 width: 25px;
                 height: 3px;
@@ -62,26 +72,31 @@
                 margin: 5px;
                 transition: all 0.3s ease;
             }
+
             .burger.toggle .line1 {
                 transform: rotate(-45deg) translate(-5px, 6px);
             }
+
             .burger.toggle .line2 {
                 opacity: 0;
             }
+
             .burger.toggle .line3 {
                 transform: rotate(45deg) translate(-5px, -6px);
             }
         }
+
         .typewrite > .wrap {
             border-right: 0.08em solid #afafaf;
             color: #afafaf;
         }
     </style>
 </head>
+
 <body class="bg-gray-900 text-white">
     <header class="navbar flex justify-between items-center p-5 shadow-lg" id="navbar">
         <div class="logo" data-aos="fade-in" data-aos-delay="100" data-aos-duration="800">
-            <a href="" class="copyright text-2xl font-bold transition duration-300" data-aos="fade-down" data-aos-delay="300" data-aos-duration="900" text-white"><span>Garren</span> Benaya</a>
+            <a href="" class="text-2xl font-bold transition duration-300 text-white"><span>Garren</span> Benaya</a>
         </div>
         <ul class="nav-links flex space-x-5" data-aos="fade-down">
             <li data-aos="fade-down" data-aos-delay="300" data-aos-duration="900">
@@ -97,8 +112,7 @@
                 <a href="#contact" class="text-white px-3 py-2 hover:text-gray-300 transition duration-300">Contact</a>
             </li>
             <li class="garren" data-aos="fade-down" data-aos-delay="1500" data-aos-duration="2100">
-                <a href="" style="--clr:#00ffff"><span>Garren</span><i></i>
-                </a>
+                <a href="" style="--clr:#00ffff"><span>Garren</span><i></i></a>
             </li>
         </ul>
         <div class="burger" id="burger">
@@ -109,83 +123,61 @@
     </header>
 
     <main class="flex flex-col items-center justify-center min-h-screen" data-aos="fade-up">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 mr-48 text-white">Hi, I'm <span>Garren Benaya</span>, Front-End <br>Developer Based In Jakarta, Indonesia.</h1>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Hi, I'm <span>Garren Benaya</span>, Front-End <br>Developer Based In Jakarta, Indonesia.</h1>
         <h2 data-aos="fade-in" data-aos-delay="500" data-aos-duration="1200">
-            <a href="#" class="typewrite mr-48" data-period="1000" data-type='[  
-              "Crafting elegant solutions to complex problems with a focus on user experience.",
-              "Bringing ideas to life with a relentless drive for innovation and excellence.",
-              "Building beautiful and functional web experiences with passion."
-              ]'><span class="wrap"></span></a>
+            <a href="#" class="typewrite" data-period="1000" data-type='[
+                "Crafting elegant solutions to complex problems with a focus on user experience.",
+                "Bringing ideas to life with a relentless drive for innovation and excellence.",
+                "Building beautiful and functional web experiences with passion."
+                ]'><span class="wrap"></span></a>
         </h2>
     </main>
-    
-    <section id="about" class="py-20 bg-black text-white">
-        <h1 class="section-title aos-init aos-animate text-4xl font-bold mb-10 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">About Me</h1>
-        <div class="about-wrap aos-init aos-animate flex flex-col md:flex-row items-center justify-center gap-10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
-          <div class="about-img">
-            <img src="images/me.jpg" alt="" class="rounded-full w-48 h-48">
 
-          </div>
-          <div class="about-desc text-center md:text-left">
-            <p class="copyright mb-4">
-              I am a highly motivated and enthusiastic software engineer with a
-              specialization in frontend development. With a passion for
-              creating visually appealing and user-friendly web experiences.
-            </p>
-            <p class="copyright mb-4">
-              I currently working with Node and JavaScript ecosystems. However,
-              I am always eager to expand my knowledge and learn new languages
-              and technologies.
-            </p>
-            <p class="copyright mb-4">
-              With strong problem-solving skills and a drive to continuously
-              improve, I am confident in my ability to meet any challenge and
-              deliver outstanding results.
-            </p>
-            <p class="copyright mb-4">
-              Here are a few main technologies I've been working with recently :
-            </p>
-            <div class="about-info-grid">
-              <div class="about-list">
-                <ul class="grid grid-cols-2 gap-4">
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>HTML &amp; CSS</span>
-                  </li>
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>Javascript</span>
-                  </li>
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>Fotografi</span>
-                  </li> 
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>Adobe Premier</span>
-                  </li>
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>Video Editor</span>
-                  </li> 
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>Python</span>
-                  </li> 
-                  <li>
-                    <i class="fa fa-code"></i>
-                    <span>PHP</span>
-                  </li> 
-                </ul>
-              </div>
+    <section id="about" class="py-20 bg-black text-white">
+        <h1 class="section-title text-4xl font-bold mb-10 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">About Me</h1>
+        <div class="about-wrap flex flex-col md:flex-row items-center justify-center gap-10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+            <div class="about-img">
+                <img src="images/me.jpg" alt="" class="rounded-full w-48 h-48">
             </div>
-             <a href="#"><button class="button mt-4">Download CV</span></button></a>
-          </div>
+            <div class="about-desc text-center md:text-left">
+                <p class="mb-4">
+                    I am a highly motivated and enthusiastic software engineer with a
+                    specialization in frontend development. With a passion for
+                    creating visually appealing and user-friendly web experiences.
+                </p>
+                <p class="mb-4">
+                    I currently work with Node and JavaScript ecosystems. However,
+                    I am always eager to expand my knowledge and learn new languages
+                    and technologies.
+                </p>
+                <p class="mb-4">
+                    With strong problem-solving skills and a drive to continuously
+                    improve, I am confident in my ability to meet any challenge and
+                    deliver outstanding results.
+                </p>
+                <p class="mb-4">
+                    Here are a few main technologies I've been working with recently:
+                </p>
+                <div class="about-info-grid">
+                    <div class="about-list">
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li><i class="fa fa-code"></i> <span>HTML &amp; CSS</span></li>
+                            <li><i class="fa fa-code"></i> <span>JavaScript</span></li>
+                            <li><i class="fa fa-code"></i> <span>Fotografi</span></li>
+                            <li><i class="fa fa-code"></i> <span>Adobe Premier</span></li>
+                            <li><i class="fa fa-code"></i> <span>Video Editor</span></li>
+                            <li><i class="fa fa-code"></i> <span>Python</span></li>
+                            <li><i class="fa fa-code"></i> <span>PHP</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#"><button class="button mt-4">Download CV</button></a>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="py-20 bg-black text-white" data-aos="fade-up">
-        <div class="container ml-52 px-6 min-h-screen">
+        <div class="container mx-auto px-6 min-h-screen">
             <h2 class="text-4xl font-bold mb-5">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div class="p-5 bg-gray-800 shadow rounded-lg">
@@ -204,37 +196,39 @@
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-black text-white" data-aos="fade-up">
-        <div class="container ml-52 px-6">
-            <h2 class="text-4xl font-bold mb-5">Contact</h2>
-            <p>If you would like to get in touch...</p>
-            <form action="#" method="POST">
-                <div class="mb-4">
-                    <label for="name" class="block text-lg font-medium mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+    <section id="skills" class="py-20 bg-black text-white" data-aos="fade-up">
+        <div class="container mx-auto px-6 min-h-screen">
+            <h2 class="text-4xl font-bold mb-5">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Skill 1</h3>
+                    <p>Brief description of Skill 1.</p>
                 </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-lg font-medium mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Skill 2</h3>
+                    <p>Brief description of Skill 2.</p>
                 </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-lg font-medium mb-2">Message</label>
-                    <textarea id="message" name="message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                <div class="p-5 bg-gray-800 shadow rounded-lg">
+                    <h3 class="text-2xl font-bold mb-3">Skill 3</h3>
+                    <p>Brief description of Skill 3.</p>
                 </div>
-                <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
+
+    <section id="contact" class="py-20 bg-black text-white" data-aos="fade-up">
+        <div class="container mx-auto px-6 min-h-screen">
+            <h2 class="text-4xl font-bold mb-5">Contact</h2>
+            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:garren@example.com" class="text-blue-400">garren@example.com</a>.</p>
+        </div>
+    </section>
+    
     <div class="fixed-left-info">
-        <p>
-            <a href= "mailto:garrenbenaya74@gmail.com">garrenbenaya74@gmail.com </a>
-        </p>
-        <p>
-            <a href="https://wa.me/+6282116341828">Telepon: +62 821-1634-1828</a>
-        </p>
+        <a href="mailto:garrenbenaya74@gmail.com">Email: garrenbenaya74@gmail.com</a>
+        <br>
+        <a href="https://wa.me/+6282116341828">Telepon: +62 821-1634-1828</a>
     </div>
 
-    
     <footer class="copyright py-4 bg-black text-white text-center">
         <p>Made by Garren Benaya</p>
     </footer>
@@ -243,80 +237,66 @@
     <script>
         AOS.init();
 
-        var TxtType = function(el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
+        const typewrite = document.querySelector('.typewrite');
+        const txtElement = typewrite.getAttribute('data-type');
+        const period = typewrite.getAttribute('data-period');
+        const data = JSON.parse(txtElement);
+        let loopNum = 0;
+        let txt = '';
+        let isDeleting = false;
 
-        TxtType.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+        function type() {
+            const i = loopNum % data.length;
+            const fullTxt = data[i];
 
-            if (this.isDeleting) {
-                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            if (isDeleting) {
+                txt = fullTxt.substring(0, txt.length - 1);
             } else {
-                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                txt = fullTxt.substring(0, txt.length + 1);
             }
 
-            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+            document.querySelector('.wrap').innerHTML = txt;
 
-            var that = this;
-            var delta = 200 - Math.random() * 100;
+            let delta = 200 - Math.random() * 100;
 
-            if (this.isDeleting) { delta /= 2; }
+            if (isDeleting) {
+                delta /= 2;
+            }
 
-            if (!this.isDeleting && this.txt === fullTxt) {
-                delta = this.period;
-                this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-                this.isDeleting = false;
-                this.loopNum++;
+            if (!isDeleting && txt === fullTxt) {
+                delta = period;
+                isDeleting = true;
+            } else if (isDeleting && txt === '') {
+                isDeleting = false;
+                loopNum++;
                 delta = 500;
             }
 
-            setTimeout(function() {
-                that.tick();
+            setTimeout(() => {
+                type();
             }, delta);
-        };
+        }
 
-        window.onload = function() {
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i=0; i<elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtType(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-        };
+        document.addEventListener('DOMContentLoaded', type);
 
-        // Navbar scroll behavior
-        const navbar = document.getElementById('navbar');
         const burger = document.getElementById('burger');
         const navLinks = document.querySelector('.nav-links');
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop) {
-                navbar.style.top = '-80px';
-            } else {
-                navbar.style.top = '0';
-            }
-
-            lastScrollTop = scrollTop;
-        });
 
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             burger.classList.toggle('toggle');
         });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.style.top = '0';
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
     </script>
 </body>
+
 </html>
