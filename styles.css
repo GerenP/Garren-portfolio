@@ -48,15 +48,16 @@ nav a:hover {
 }
 
 .garren a {
-    position: relative;
     color: var(--clr);
-    background: var(--clr);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     font-weight: 400;
-    padding: 10px 30px;
-}
+    font-size: 16px;
+    background: var(--clr);
+    padding: 0.5em 1em;
+    position: relative;
+    outline: none;
+    -webkit-transition: 1.2s;
+    transition: 1.2s;
+    z-index: 2;}
 
 .garren a:hover {
     background: var(--clr);

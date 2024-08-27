@@ -87,6 +87,7 @@
         }
 
         .typewrite > .wrap {
+            text-align: left;
             border-right: 0.08em solid #afafaf;
             color: #afafaf;
         }
@@ -137,7 +138,7 @@
         <h1 class="section-title text-4xl font-bold mb-10 text-center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">About Me</h1>
         <div class="about-wrap flex flex-col md:flex-row items-center justify-center gap-10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
             <div class="about-img">
-                <img src="images/me.jpg" alt="" class="rounded-full w-48 h-48">
+                <img src="profil.jpg" alt="" class="rounded-full w-48 h-48">
             </div>
             <div class="about-desc text-center md:text-left">
                 <p class="mb-4">
@@ -257,7 +258,7 @@
 
             document.querySelector('.wrap').innerHTML = txt;
 
-            let delta = 200 - Math.random() * 100;
+            let delta = 150 - Math.random() * 200;
 
             if (isDeleting) {
                 delta /= 2;
