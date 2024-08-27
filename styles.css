@@ -51,6 +51,7 @@ nav a:hover {
     color: var(--clr);
     font-weight: 400;
     font-size: 16px;
+    letter-spacing: 0.1rem;
     background: var(--clr);
     padding: 0.5em 1em;
     position: relative;
